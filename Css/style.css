@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+:root {
+  /*## Colors*/
+
+  /*### Primary*/
+  --Soft-red: hsl(10, 79%, 65%);
+  --Cyan: hsl(186, 34%, 60%);
+
+  /*### Neutral*/
+  --Dark-brown: hsl(25, 47%, 15%);
+  --Medium-brown: hsl(28, 10%, 53%);
+  --Cream: hsl(27, 66%, 92%);
+  --Very-pale-orange: hsl(33, 100%, 98%);
+}
+/*----------------------------------------------*/
+
+body {
+  background-color: var(--Cream);
+  height: 100vh;
+  /*text*/
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  color: var(--Medium-brown);
+  /*flex*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.headerWeb {
+  background-color: var(--Soft-red);
+  border-radius: 0.5em;
+  color: var(--Very-pale-orange);
+  /*flex*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /*space*/
+  padding: 1.5em;
+  margin-bottom: 1em;
+}
+.headerWeb .iconWeb {
+  width: 72px;
+  height: 48px;
+  background-image: url("./../images/logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.headerWeb .labelBalance {
+  display: block;
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+}
+.headerWeb .balanceAmount {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.mainContent {
+  background-color: var(--Very-pale-orange);
+  border-radius: 0.5em;
+  padding: 2em;
+  padding-bottom: 0;
+}
+.mainContent .graphTitle {
+  margin: 0;
+  /*text*/
+  color: var(--Dark-brown);
+  font-size: 1.6em;
+  font-weight: bold;
+}
+.mainContent .thisVsPrev {
+  /*flex*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  /*space*/
+  padding: 2em 0;
+}
+.thisVsPrev .totalAmount {
+  display: block;
+  color: var(--Dark-brown);
+  font-size: 2em;
+  font-weight: bold;
+}
+.thisVsPrev .percent {
+  display: block;
+  color: var(--Dark-brown);
+  font-weight: bold;
+  text-align: end;
+}
+
+/*------------------------Graph-----------------------------*/
+#graphContainer {
+  padding-bottom: 2em;
+  border-bottom: 1px solid var(--Medium-brown);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.barContainer {
+  height: 13em;
+  /*flex*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  /*space*/
+  margin-right: 0.5em;
+}
+.barContainer:last-child {
+  /*space*/
+  margin-right: 0;
+}
+
+.bar {
+  background-color: var(--Soft-red);
+  width: 2.5em;
+  border-radius: 0.25em;
+  margin: 1em 0;
+}
+.barContainer:hover .bar {
+  filter: brightness(1.25);
+  cursor: pointer;
+}
+
+.barContainer:hover .amountLabel {
+  opacity: 1;
+}
+.dayLabel {
+  font-size: 0.8em;
+}
+.amountLabel {
+  background-color: var(--Dark-brown);
+  font-size: 0.8em;
+  font-weight: bold;
+  color: white;
+  padding: 0.25em;
+  border-radius: 0.25em;
+  opacity: 0;
+}
+
+/*---footer--*/
+.attribution {
+  font-size: 0.75em;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*####################### Mobile #####################*/
+@media screen and (max-width: 1440px) {
+  body {
+    font-size: 14px;
+  }
+  .mainContent {
+    padding: 1em;
+    padding-bottom: 0;
+  }
+  .mainContent .thisVsPrev {
+    /*space*/
+    padding: 1.5em 0;
+  }
+}
+/*####################### Tiny Mobile #####################*/
+@media screen and (max-width: 300px) {
+  body {
+    font-size: 10px;
+  }
+  .mainContent {
+    padding: 1em;
+  }
+  .mainContent .thisVsPrev {
+    /*space*/
+    padding: 2em 0;
+  }
+}
