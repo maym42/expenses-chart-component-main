@@ -1,4 +1,4 @@
-👋#[Preview Site](https://maym42.github.io/expenses-chart-component-main/)
+👋![Preview Site](https://maym42.github.io/expenses-chart-component-main/)
 
 # Frontend Mentor - Expenses chart component
 
